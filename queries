@@ -1,0 +1,28 @@
+// Artists and shows performed in
+SELECT ARTIST.ArtistName, SHOW.ShowName FROM ARTIST 
+JOIN SHOW_ARTISTS ON ARTIST.ArtistID = SHOW_ARTISTS.ARTISTID
+JOIN SHOW ON SHOW.ShowID = SHOW_ARTISTS.ShowID;
+
+//Artists with the most performances
+SELECT ARTIST.ArtistNAME, COUNT(SHOW_ARTISTS.ShowID) AS Performances FROM ARTIST
+JOIN SHOW_ARTISTS ON ARTIST.ArtistID = SHOW_ARTISTS.ArtistID GROUP BY ARTIST.ArtistName
+HAVING COUNT(SHOW_ARTISTS.ShowID) =(SELECT MAX(Performances) FROM (SELECT COUNT(SHOW_ARTISTS.ShowID)
+AS Performances FROM SHOW_ARTISTS GROUP BY SHOW_ARTISTS.ArtistID) AS COUNTS);
+
+//Venue where artists have or will perform at
+SELECT ARTIST.ArtistName, VENUE.VenueName, SHOW.ShowName FROM ARTIST
+JOIN SHOW_ARTISTS ON ARTIST.ArtistID = SHOW_ARTISTS.ArtistID 
+JOIN SHOW ON SHOW.ShowID = SHOW_ARTISTS.ShowID 
+JOIN VENUE ON VENUE.VenueID = SHOW.VenueID;
+
+// The district that has produced the most performing artists.
+SELECT ARTIST.District, COUNT(SHOW_ARTISTS.ShowID) AS Performances FROM ARTIST
+JOIN SHOW_ARTISTS ON ARTIST.ArtistID = SHOW_ARTISTS.ArtistID GROUP BY ARTIST.District
+HAVING COUNT(SHOW_ARTISTS.ShowID) =(SELECT MAX(Performances) FROM (SELECT Artist.District, COUNT(SHOW_ARTISTS.ShowID)
+AS Performances FROM ARTIST JOIN SHOW_ARTISTS ON ARTIST.ArtistID = SHOW_ARTISTS.ArtistID
+GROUP BY ARTIST.District) AS COUNTS);
+
+// Highest-paid show an artist has performed in (show name, venue, date, and price.
+SELECT SHOW.ShowName, SHOW.StartDate, SHOW.EndDate, SHOW.Price, VENUE.VenueName
+FROM SHOW JOIN VENUE ON SHOW.VenueID = VENUE.VenueID ORDER BY SHOW.Price DESC LIMIT 1;
+
