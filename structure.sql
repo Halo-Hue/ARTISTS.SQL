@@ -6,7 +6,8 @@ CREATE TABLE ARTIST (
     Address VARCHAR(100) NOT NULL,
     Phone VARCHAR(20),
     Email VARCHAR(120),
-    District VARCHAR(120)
+    District VARCHAR(120),
+    YearsActive INT
 );
 
 CREATE TABLE VENUE (
