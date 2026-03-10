@@ -43,17 +43,18 @@ CREATE TABLE SHOW_ARTISTS (
 
 -- Artist DATA
 
-INSERT INTO ARTIST (ArtistName, StageName, Genre, Address, Phone, Email, District) VALUES 
-('Anna Marie', 'Voila', 'Opera', '123 TownsVille', '789-4532', 'AnnaMarieOfficial@gmail.com', 'Toledo'),
-('John Martin', 'Collier', 'Theater', '243 BananaLake.', '654-1991', 'JM.Office@gmail.com', 'Cayo'),
-('Sam Coffmann', 'Coffee', 'Theater', '244 BananaLake.', '698-1221', 'SamCoffee@gmail.com', 'Cayo'),
-('Navier Ellie. Trovi', 'Queen', 'Theater', '999 WesternLake.', '654-9999', 'Navier2434@gmail.com', 'Cayo'),
-('Wontario D. Melvin', 'Clown', 'Comedy', '465 TownVille.', '623-1276', 'OneAndAll@gmail.com', 'Toledo'),
-('Hennie Winters', 'Kharina', 'Dance', '324 RoganaSt.', '856-3265', 'Tumaini@gmail.com', 'StannCreek'),
-('Mark Fullburn', 'John Smith', 'Music', '22 BottleneckVille.', '264-2296', 'JS@gmail.com', 'Corozal'),
-('Anna Croft', 'Carmellia', 'Music', '298 ModernSt.', '660-9456', 'BloomInWinter@gmail.com', 'Toledo'),
-('Mercurio Van Astrea', 'Timmy', 'Comedy', '48 BottleneckVille.', '091-8543', 'ImmatureFun@gmail.com', 'Corozal'),
-('Marianne Magentano', 'Sonata', 'Dance', '281 WesternLake.', '221-0054', 'JimmiePep@gmail.com', 'Cayo');
+INSERT INTO ARTIST (ArtistName, StageName, Genre, Address, Phone, Email, District, YearsActive) VALUES 
+('Anna Marie', 'Voila', 'Opera', '123 TownsVille', '789-4532', 'AnnaMarieOfficial@gmail.com', 'Toledo', 2),
+('John Martin', 'Collier', 'Theater', '243 BananaLake.', '654-1991', 'JM.Office@gmail.com', 'Cayo', 7),
+('Sam Coffmann', 'Coffee', 'Theater', '244 BananaLake.', '698-1221', 'SamCoffee@gmail.com', 'Cayo', 1),
+('Navier Ellie. Trovi', 'Queen', 'Theater', '999 WesternLake.', '654-9999', 'Navier2434@gmail.com', 'Cayo', 2),
+('Wontario D. Melvin', 'Clown', 'Comedy', '465 TownVille.', '623-1276', 'OneAndAll@gmail.com', 'Toledo', 3),
+('Hennie Winters', 'Kharina', 'Dance', '324 RoganaSt.', '856-3265', 'Tumaini@gmail.com', 'StannCreek', 4),
+('Mark Fullburn', 'John Smith', 'Music', '22 BottleneckVille.', '264-2296', 'JS@gmail.com', 'Corozal', 10),
+('Anna Croft', 'Carmellia', 'Music', '298 ModernSt.', '660-9456', 'BloomInWinter@gmail.com', 'Toledo', 5),
+('Mercurio Van Astrea', 'Timmy', 'Comedy', '48 BottleneckVille.', '091-8543', 'ImmatureFun@gmail.com', 'Corozal', 2),
+('Marianne Magentano', 'Sonata', 'Dance', '281 WesternLake.', '221-0054', 'JimmiePep@gmail.com', 'Cayo', 1);
+
 
 
 --VENUE DATA
