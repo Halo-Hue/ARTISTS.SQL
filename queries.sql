@@ -1,7 +1,7 @@
 -- Artists and shows performed in
 SELECT ARTIST.ArtistName, SHOW.ShowName FROM ARTIST 
 JOIN SHOW_ARTISTS ON ARTIST.ArtistID = SHOW_ARTISTS.ARTISTID
-JOIN SHOW ON SHOW.ShowID = SHOW_ARTISTS.ShowID;
+JOIN SHOW ON SHOW.ShowID = SHOW_ARTISTS.ShowID GROUP BY ARTIST.ArtistName, SHOW.ShowName;
 
 --Artists with the most performances
 SELECT ARTIST.ArtistNAME, COUNT(SHOW_ARTISTS.ShowID) AS Performances FROM ARTIST
